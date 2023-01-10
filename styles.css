@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  overflow: hidden;
+}
+.container {
+  border: solid white 3px;
+  width: 1280px;
+  height: 720px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 100%;
+  touch-action: none;
+}
+
+.canvas1 {
+  background-image: url("background.png");
+  width: 1280px;
+  height: 720px;
+  max-width: 100%;
+  max-height: 100%;
+  touch-action: none;
+}
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  touch-action: none;
+}
+
+.leavesLeft {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top: 50px;
+  left: -100px;
+  transition: 0.3s;
+  animation: wobble ease-in-out 1.5s infinite;
+  pointer-events: none;
+}
+canvas:hover ~ .leavesLeft {
+  left: -150px;
+  transform: rotate(15deg);
+}
+.leavesRight {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top: 50px;
+  right: -100px;
+  transition: 0.2s;
+  animation: wobble ease-in-out 1.6s infinite;
+  pointer-events: none;
+}
+canvas:hover ~ .leavesRight {
+  right: -150px;
+  transform: rotate(-15deg);
+}
+@keyframes wobble {
+  0% {
+    top: 50px;
+  }
+  50% {
+    top: 56px;
+  }
+  100% {
+    top: 50px;
+  }
+}
+.owlBear,
+.grassImg,
+.plantImg,
+.bushImg {
+  display: none;
+}
+.upBtn{
+ background-color: transparent;
+  position: absolute;
+  bottom: 150px;
+  left: 30px;
+  border: solid white 2px;
+  border-radius: 50%;
+  font-size: 50px;
+  font-weight: bolder;
+  color: white;
+  width: 100px;
+  height: 100px;
+  z-index: 10;
+}
+.downBtn{
+ background-color: transparent;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  border: solid white 2px;
+  border-radius: 50%;
+  font-size: 50px;
+  font-weight: bolder;
+  color: white;
+  width: 100px;
+  height: 100px;
+  z-index: 10;
+}
+.leftBtn{
+ background-color: transparent;
+  position: absolute;
+  bottom: 20px;
+  right: 150px;
+  border: solid white 2px;
+  border-radius: 50%;
+  font-size: 50px;
+  font-weight: bolder;
+  color: white;
+  width: 100px;
+  height: 100px;
+  z-index: 10;
+}
+.rightBtn{
+ background-color: transparent;
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  border: solid white 2px;
+  border-radius: 50%;
+  font-size: 50px;
+  font-weight: bolder;
+  color: white;
+  width: 100px;
+  height: 100px;
+  z-index: 10;
+}
+
