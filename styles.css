@@ -2,11 +2,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  touch-action: none;
 }
 body {
   background-color: black;
   overflow: hidden;
-  touch-action: none;
 }
 .container {
   border: solid white 3px;
@@ -19,7 +19,6 @@ body {
   overflow: hidden;
   max-width: 100%;
   max-height: 100%;
-  touch-action: none;
 }
 
 .canvas1 {
@@ -28,7 +27,6 @@ body {
   height: 720px;
   max-width: 100%;
   max-height: 100%;
-  touch-action: none;
 }
 .overlay {
   position: absolute;
@@ -36,7 +34,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  touch-action: none;
 }
 
 .leavesLeft {
@@ -97,7 +94,6 @@ canvas:hover ~ .leavesRight {
   width: 50px;
   height: 50px;
   z-index: 10;
-  touch-action: none;
 }
 .downBtn {
   background-color: transparent;
@@ -112,7 +108,6 @@ canvas:hover ~ .leavesRight {
   width: 50px;
   height: 50px;
   z-index: 10;
-  touch-action: none;
 }
 .leftBtn {
   background-color: transparent;
@@ -127,7 +122,6 @@ canvas:hover ~ .leavesRight {
   width: 50px;
   height: 50px;
   z-index: 10;
-  touch-action: none;
 }
 .rightBtn {
   background-color: transparent;
@@ -142,5 +136,4 @@ canvas:hover ~ .leavesRight {
   width: 50px;
   height: 50px;
   z-index: 10;
-  touch-action: none;
 }
