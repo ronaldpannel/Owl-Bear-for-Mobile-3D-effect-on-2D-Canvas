@@ -6,6 +6,7 @@
 body {
   background-color: black;
   overflow: hidden;
+  touch-action: none;
 }
 .container {
   border: solid white 3px;
