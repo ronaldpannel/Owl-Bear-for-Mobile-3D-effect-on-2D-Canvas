@@ -5,6 +5,10 @@ window.addEventListener("load", function () {
   const ctx = canvas.getContext("2d");
   canvas.width = 1280;
   canvas.height = 720;
+  const upBtn = this.document.getElementById("upBtn");
+  const downBtn = this.document.getElementById("downBtn");
+  const leftBtn = this.document.getElementById("leftBtn");
+  const rightBtn = this.document.getElementById("rightBtn");
 
   class InputHandler {
     constructor(game) {
@@ -14,6 +18,16 @@ window.addEventListener("load", function () {
       });
       window.addEventListener("keyup", (e) => {
         this.game.lastKey = "R" + e.key;
+      });
+
+      //touch events
+      window.addEventListener("touchstart", (e) => {
+        e.preventDefault();
+        this.game.lastTouch = e.target.id;
+      });
+      window.addEventListener("touchend", (e) => {
+        e.preventDefault();
+        this.game.lastTouch = "R" + e.target.id;
       });
     }
   }
@@ -86,7 +100,34 @@ window.addEventListener("load", function () {
       } else if (this.game.lastKey == "RArrowDown" && this.speedY > 0) {
         this.setSpeed(0, 0);
         this.frameY = 0;
+      } else if (this.game.lastTouch == "upBtn") {
+        this.setSpeed(0, -this.maxSpeed * 0.6);
+        this.frameY = 7;
+      } else if (this.game.lastTouch == "RupBtn" && this.speedY < 0) {
+        this.setSpeed(0, 0);
+        this.frameY = 6;
+      } else if (this.game.lastTouch == "downBtn") {
+        this.setSpeed(0, this.maxSpeed * 0.6);
+        this.frameY = 1;
+      } else if (this.game.lastTouch == "RdownBtn" && this.speedY > 0) {
+        this.setSpeed(0, 0);
+        this.frameY = 0;
+      } else if (this.game.lastTouch == "leftBtn") {
+        this.setSpeed(-this.maxSpeed, 0);
+        this.frameY = 3;
+      } else if (this.game.lastTouch == "RleftBtn" && this.speedX < 0) {
+        this.setSpeed(0, 0);
+        this.frameY = 2;
+      } else if (this.game.lastTouch == "rightBtn") {
+        this.setSpeed(this.maxSpeed, 0);
+        this.frameY = 5;
+      } else if (this.game.lastTouch == "RrightBtn" && this.speedX > 0) {
+        this.setSpeed(0, 0);
+        this.frameY = 4;
       }
+
+      //player movement from touch buttons and sprite swap
+
       //edge restrictions
       if (this.x < 0) {
         this.x = 0;
@@ -166,6 +207,7 @@ window.addEventListener("load", function () {
       this.width = width;
       this.height = height;
       this.latKey = undefined;
+      this.lastTouch = undefined;
       this.input = new InputHandler(this);
       this.owlBear = new OwlBear(this);
       this.numberOfPlants = 10;

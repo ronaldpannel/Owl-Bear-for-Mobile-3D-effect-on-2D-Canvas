@@ -42,7 +42,7 @@ body {
   position: absolute;
   width: 250px;
   height: 250px;
-  top: 50px;
+  top: 40px;
   left: -100px;
   transition: 0.3s;
   animation: wobble ease-in-out 1.5s infinite;
@@ -56,7 +56,7 @@ canvas:hover ~ .leavesLeft {
   position: absolute;
   width: 250px;
   height: 250px;
-  top: 50px;
+  top: 40px;
   right: -100px;
   transition: 0.2s;
   animation: wobble ease-in-out 1.6s infinite;
@@ -83,60 +83,63 @@ canvas:hover ~ .leavesRight {
 .bushImg {
   display: none;
 }
-.upBtn{
- background-color: transparent;
+.upBtn {
+  background-color: transparent;
   position: absolute;
-  bottom: 150px;
-  left: 30px;
+  bottom: 70px;
+  left: 10px;
   border: solid white 2px;
   border-radius: 50%;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bolder;
   color: white;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   z-index: 10;
+  touch-action: none;
 }
-.downBtn{
- background-color: transparent;
+.downBtn {
+  background-color: transparent;
   position: absolute;
-  bottom: 30px;
-  left: 30px;
+  bottom: 10px;
+  left: 10px;
   border: solid white 2px;
   border-radius: 50%;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bolder;
   color: white;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   z-index: 10;
+  touch-action: none;
 }
-.leftBtn{
- background-color: transparent;
+.leftBtn {
+  background-color: transparent;
   position: absolute;
-  bottom: 20px;
-  right: 150px;
+  bottom: 10px;
+  right: 75px;
   border: solid white 2px;
   border-radius: 50%;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bolder;
   color: white;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   z-index: 10;
+  touch-action: none;
 }
-.rightBtn{
- background-color: transparent;
+.rightBtn {
+  background-color: transparent;
   position: absolute;
-  bottom: 20px;
-  right: 30px;
+  bottom: 10px;
+  right: 10px;
   border: solid white 2px;
   border-radius: 50%;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bolder;
   color: white;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   z-index: 10;
+  touch-action: none;
 }
-
